@@ -6,3 +6,11 @@ import pexpect
 import subprocess
 
 isodatetime = datetime.now().isoformat()
+
+def dellbu(host):
+    ''' backup for a dell unit
+    '''
+
+def fortigatebu(host):
+    ''' backup for a fortigate unit
+    '''
