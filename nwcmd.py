@@ -9,7 +9,7 @@ type_fg = 'fortigate'
 type_dl = 'dell'
 
 def dellcmd(host, commando, priviledge):
-    ''' backup for a dell unit
+    ''' command on a dell unit
     '''
     c = pexpect.spawn(r'ssh {}'.format(host), encoding='utf-8')
     c.logfile = sys.stdout
@@ -23,7 +23,7 @@ def dellcmd(host, commando, priviledge):
     c.close()
 
 def fortigatebu(host):
-    ''' backup for a fortigate unit
+    ''' command on a fortigate unit
     '''
 
 @click.command()
