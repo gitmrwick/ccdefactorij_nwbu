@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
 
 import sys
-from datetime import datetime
 from csv import reader
 import click
 import pexpect
-import subprocess
-
-isodatetime = datetime.now().isoformat()
 
 type_fg = 'fortigate'
 type_dl = 'dell'
