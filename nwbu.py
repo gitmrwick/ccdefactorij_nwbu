@@ -14,15 +14,15 @@ def dellbu(host):
     c = pexpect.spawn(r'ssh {}'.format(host), encoding='utf-8')
     c.logfile = sys.stdout
     c.sendline('enable')
-    c.expect(r'sw1#')
+    c.expect(r'sw9#')
     c.sendline(r'copy running-config scp://burnout@burnout/running-config')
     c.expect(r'Password:')
-    c.sendline(r'=niet voor scm=')
+    # c.sendline(r'niet voor scm')
     c.expect(r'(y/n)')
     c.send(r'y')
-    c.expect(r'sw1#', timeout=120)
+    c.expect(r'sw9#', timeout=120)
     c.sendline(r'exit')
-    c.expect(r'sw1>')
+    c.expect(r'sw9>')
     c.sendline(r'exit')
     c.close()
 
@@ -30,4 +30,4 @@ def fortigatebu(host):
     ''' backup for a fortigate unit
     '''
 
-dellbu('sw1')
+dellbu('sw9')
