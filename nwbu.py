@@ -17,6 +17,7 @@ def dellbu(host):
     c.expect(r'sw9#')
     c.sendline(r'copy running-config scp://burnout@burnout/running-config')
     c.expect(r'Password:')
+    c.sendline(r'Factorij101930')
     # c.sendline(r'niet voor scm')
     c.expect(r'(y/n)')
     c.send(r'y')
